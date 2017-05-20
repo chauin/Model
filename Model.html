@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	html,body{
+		height: 100%;
+		transform-style: preserve-3d;
+		transform: perspective(10000px);
+	}
+	.cube{
+		width: 300px;
+		height: 300px;
+		/*border: 1px dashed black;*/
+		margin: 0 auto;
+		margin-top: 200px;
+		position: relative;
+		transform: rotateY(-43deg) rotateX(-19deg);
+		transform-style: preserve-3d;
+		/*transform:rotateY(1,0,0,45deg);
+		animation-name: test;
+		animation-timing-function: linear;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;*/
+	}
+	.sq1{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 0;
+		top: 0;	
+		animation-name: test1;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq2{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 50px;
+		top: 0px;
+		animation-name: test2;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq3{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 100px;
+		top: 0px;
+		animation-name: test3;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq4{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 0;
+		top:50px;
+		animation-name: test4;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;		
+	}
+	.sq5{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		animation-name: test5;
+		animation-duration: 5s;
+		animation-timing-function:linear;
+		animation-iteration-count: infinite;
+	}
+	.sq6{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 100px;
+		top: 50px;
+		animation-name: test6;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq7{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 0;
+		top:100px;
+		animation-name: test7;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;		
+	}
+	.sq8{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 50px;
+		top: 100px;
+		animation-name: test8;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq9{
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 100px;
+		top: 100px;
+		animation-name: test9;
+		animation-duration:5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq10{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 0;
+		top: 0;	
+		animation-name: test10;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq11{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 50px;
+		top: 0px;
+		animation-name: test11;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq12{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 100px;
+		top: 0px;
+		animation-name: test12;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq13{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 0;
+		top:50px;	
+		animation-name: test13;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq14{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		animation-name: test14;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq15{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 100px;
+		top: 50px;
+		animation-name: test15;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq16{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 0;
+		top:100px;		
+		animation-name: test16;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq17{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 50px;
+		top: 100px;
+		animation-name: test17;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq18{
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+		position: absolute;
+		left: 100px;
+		top: 100px;
+		animation-name: test18;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq19{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 0;
+		top: 0;	
+		animation-name: test19;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;		
+	}
+	.sq20{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 50px;
+		top: 0px;
+		animation-name: test20;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq21{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 100px;
+		top: 0px;
+		animation-name: test21;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq22{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 0;
+		top:50px;
+		animation-name: test22;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;			
+	}
+	.sq23{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		animation-name: test23;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq24{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 100px;
+		top: 50px;
+		animation-name: test24;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq25{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 0;
+		top:100px;	
+		animation-name: test25;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;	
+	}
+	.sq26{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 50px;
+		top: 100px;
+		animation-name: test26;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.sq27{
+		transform-style: preserve-3d;
+		transform: translateZ(-50px);
+		position: absolute;
+		left: 100px;
+		top: 100px;
+		animation-name: test27;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.f{
+		width: 50px;
+		height: 50px;
+		border: 1px dashed black;
+		position: absolute;
+	}
+	.f1{
+		background: rgba(176,128,255,0.9);
+		transform: translateZ(25px);
+	}
+	.f2{
+		background: rgba(255,124,241,0.9);
+		transform:translateX(25px) rotateY(90deg);
+	}
+	.f3{
+		background: rgba(218,255,128,0.9);
+		transform: translateY(-25px) rotateX(90deg);
+	}
+	@keyframes test1{
+		16.66%{
+			transform: translateX(-100px);
+		}
+		33.33%{
+			transform: translateX(-100px);
+		}
+		50%{
+			transform: translateX(-100px) translateY(-50px);
+		}
+		66.65%{
+			transform: translateX(0px) translateY(-50px);
+		}
+		83.8%{
+			transform: translateX(0px) translateY(-50px);
+		}
+		100%{
+			transform: translateX(0px);
+		}
+	}
+	@keyframes test2{
+		16.66%{
+			transform: translateY(0px);
+		}
+		33.33%{
+			transform: translateY(0px);
+		}
+		50%{
+			transform: translateY(-50px);
+		}
+		66.65%{
+			transform: translateY(-50px);
+		}
+		83.8%{
+			transform: translateY(-50px);
+		}
+	}
+	@keyframes test3{
+		16.66%{
+			transform: translateX(100px);
+		}
+		33.33%{
+			transform: translateX(100px);
+		}
+		50%{
+			transform: translateX(100px) translateY(-50px);
+		}
+		66.65%{
+			transform: translateY(-50px);
+		}
+		83.8%{
+			transform: translateY(-50px);
+		}
+	}
+	@keyframes test4{
+		16.66%{
+			transform: translateX(-100px);
+		}
+		33.33%{
+			transform: translateX(-100px);
+		}
+		50%{
+			transform: translateX(-100px);
+		}
+		66.65%{
+			transform: translateX(0px);
+		}
+		83.8%{
+			transform: translateX(0px);
+		}
+		100%{
+			transform: translateX(0px);
+		}
+	}
+	@keyframes test6{
+		16.66%{
+			transform: translateX(100px);
+		}
+		33.33%{
+			transform: translateX(100px);
+		}
+		50%{
+			transform: translateX(100px);
+		}
+		66.65%{
+			transform: translateX(0px);
+		}
+		83.8%{
+			transform: translateX(0px);
+		}
+		100%{
+			transform: translateX(0px);
+		}
+	}
+	@keyframes test7{
+		16.66%{
+			transform: translateX(-100px);
+		}
+		33.33%{
+			transform: translateX(-100px);
+		}
+		50%{
+			transform: translateX(-100px) translateY(50px);
+		}
+		66.65%{
+			transform: translateX(0px) translateY(50px);
+		}
+		83.8%{
+			transform: translateX(0px) translateY(50px);
+		}
+		100%{
+			transform: translateX(0px);
+		}
+	}
+	@keyframes test8{
+		16.66%{
+			transform: translateY(0px);
+		}
+		33.33%{
+			transform: translateY(0px);
+		}
+		50%{
+			transform: translateY(50px);
+		}
+		66.65%{
+			transform: translateY(50px);
+		}
+		83.8%{
+			transform: translateY(50px);
+		}
+	}
+	@keyframes test9{
+		16.66%{
+			transform: translateX(100px);
+		}
+		33.33%{
+			transform: translateX(100px);
+		}
+		50%{
+			transform: translateX(100px) translateY(50px);
+		}
+		66.65%{
+			transform: translateY(50px) ;
+		}
+		83.8%{
+			transform: translateY(50px);
+		}
+	}
+	@keyframes test10{
+		16.66%{
+			transform: translateX(-100px) translateZ(50px);
+		}
+		33.33%{
+			transform: translateX(-100px) translateZ(100px);
+		}
+		50%{
+			transform: translateX(-100px) translateZ(100px) translateY(-50px);
+		}
+		66.65%{
+			transform: translateX(0px) translateZ(100px) translateY(-50px);
+		}
+		83.8%{
+			transform: translateX(0px) translateZ(50px) translateY(-50px);
+		}
+		100%{
+			transform: translateX(0px) translateZ(50px);
+		}
+	}
+	@keyframes test11{
+		16.66%{
+			transform:translateZ(50px);
+		}
+		33.33%{
+			transform:translateZ(100px);
+		}
+		50%{
+			transform:translateZ(100px) translateY(-50px);
+		}
+		66.65%{
+			transform:translateZ(100px) translateY(-50px);
+		}
+		83.8%{
+			transform:translateZ(50px) translateY(-50px);
+		}
+		100%{
+			transform:translateZ(50px);
+		}
+	}
+	@keyframes test12{
+		16.66%{
+			transform:translateZ(50px) translateX(100px);
+		}
+		33.33%{
+			transform:translateZ(100px) translateX(100px);
+		}
+		50%{
+			transform:translateZ(100px) translateX(100px) translateY(-50px);
+		}
+		66.65%{
+			transform:translateZ(100px) translateY(-50px);
+		}
+		83.8%{
+			transform:translateZ(50px) translateY(-50px);
+		}
+		100%{
+			transform:translateZ(50px);
+		}
+	}
+	@keyframes test13{
+		16.66%{
+			transform: translateX(-100px) translateZ(50px);
+		}
+		33.33%{
+			transform: translateX(-100px) translateZ(100px);
+		}
+		50%{
+			transform: translateX(-100px) translateZ(100px);
+		}
+		66.65%{
+			transform: translateX(0px) translateZ(100px);
+		}
+		83.8%{
+			transform: translateX(0px) translateZ(50px);
+		}
+		100%{
+			transform: translateX(0px) translateZ(50px);
+		}
+	}
+	@keyframes test14{
+		16.66%{
+			transform:translateZ(50px);
+		}
+		33.33%{
+			transform:translateZ(100px);
+		}
+		50%{
+			transform:translateZ(100px);
+		}
+		66.65%{
+			transform:translateZ(100px);
+		}
+		83.8%{
+			transform:translateZ(50px);
+		}
+		100%{
+			transform:translateZ(50px);
+		}
+	}
+	@keyframes test15{
+		16.66%{
+			transform:translateZ(50px) translateX(100px);
+		}
+		33.33%{
+			transform:translateZ(100px) translateX(100px);
+		}
+		50%{
+			transform:translateZ(100px) translateX(100px);
+		}
+		66.65%{
+			transform:translateZ(100px);
+		}
+		83.8%{
+			transform:translateZ(50px);
+		}
+		100%{
+			transform:translateZ(50px);
+		}
+	}
+	@keyframes test16{
+		16.66%{
+			transform: translateX(-100px) translateZ(50px);
+		}
+		33.33%{
+			transform: translateX(-100px) translateZ(100px);
+		}
+		50%{
+			transform: translateX(-100px) translateZ(100px) translateY(50px);
+		}
+		66.65%{
+			transform: translateX(0px) translateZ(100px) translateY(50px);
+		}
+		83.8%{
+			transform: translateX(0px) translateZ(50px) translateY(50px);
+		}
+		100%{
+			transform: translateX(0px) translateZ(50px);
+		}
+	}
+	@keyframes test17{
+		16.66%{
+			transform:translateZ(50px);
+		}
+		33.33%{
+			transform:translateZ(100px);
+		}
+		50%{
+			transform:translateZ(100px) translateY(50px);
+		}
+		66.65%{
+			transform:translateZ(100px) translateY(50px);
+		}
+		83.8%{
+			transform:translateZ(50px) translateY(50px);
+		}
+		100%{
+			transform:translateZ(50px);
+		}
+	}
+	@keyframes test18{
+		16.66%{
+			transform:translateZ(50px) translateX(100px);
+		}
+		33.33%{
+			transform:translateZ(100px) translateX(100px);
+		}
+		50%{
+			transform:translateZ(100px) translateX(100px) translateY(50px);
+		}
+		66.65%{
+			transform:translateZ(100px) translateY(50px);
+		}
+		83.8%{
+			transform:translateZ(50px) translateY(50px);
+		}
+		100%{
+			transform:translateZ(50px);
+		}
+	}
+	@keyframes test19{
+		16.66%{
+			transform: translateX(-100px) translateZ(-50px);
+		}
+		33.33%{
+			transform: translateX(-100px) translateZ(-100px);
+		}
+		50%{
+			transform: translateX(-100px) translateZ(-100px) translateY(-50px);
+		}
+		66.65%{
+			transform: translateX(0px) translateZ(-100px) translateY(-50px);
+		}
+		83.8%{
+			transform: translateX(0px) translateZ(-50px) translateY(-50px);
+		}
+		100%{
+			transform: translateX(0px) translateZ(-50px);
+		}
+	}
+	@keyframes test20{
+		16.66%{
+			transform:translateZ(-50px);
+		}
+		33.33%{
+			transform:translateZ(-100px);
+		}
+		50%{
+			transform:translateZ(-100px) translateY(-50px);
+		}
+		66.65%{
+			transform:translateZ(-100px) translateY(-50px);
+		}
+		83.8%{
+			transform:translateZ(-50px) translateY(-50px);
+		}
+		100%{
+			transform:translateZ(-50px);
+		}
+	}
+	@keyframes test21{
+		16.66%{
+			transform:translateZ(-50px) translateX(100px);
+		}
+		33.33%{
+			transform:translateZ(-100px) translateX(100px);
+		}
+		50%{
+			transform:translateZ(-100px) translateX(100px) translateY(-50px);
+		}
+		66.65%{
+			transform:translateZ(-100px) translateY(-50px);
+		}
+		83.8%{
+			transform:translateZ(-50px) translateY(-50px);
+		}
+		100%{
+			transform:translateZ(-50px);
+		}
+	}
+	@keyframes test22{
+		16.66%{
+			transform: translateX(-100px) translateZ(-50px);
+		}
+		33.33%{
+			transform: translateX(-100px) translateZ(-100px);
+		}
+		50%{
+			transform: translateX(-100px) translateZ(-100px);
+		}
+		66.65%{
+			transform: translateX(0px) translateZ(-100px);
+		}
+		83.8%{
+			transform: translateX(0px) translateZ(-50px);
+		}
+		100%{
+			transform: translateX(0px) translateZ(-50px);
+		}
+	}
+	@keyframes test23{
+		16.66%{
+			transform:translateZ(-50px);
+		}
+		33.33%{
+			transform:translateZ(-100px);
+		}
+		50%{
+			transform:translateZ(-100px);
+		}
+		66.65%{
+			transform:translateZ(-100px);
+		}
+		83.8%{
+			transform:translateZ(-50px);
+		}
+		100%{
+			transform:translateZ(-50px);
+		}
+	}
+	@keyframes test24{
+		16.66%{
+			transform:translateZ(-50px) translateX(100px);
+		}
+		33.33%{
+			transform:translateZ(-100px) translateX(100px);
+		}
+		50%{
+			transform:translateZ(-100px) translateX(100px);
+		}
+		66.65%{
+			transform:translateZ(-100px);
+		}
+		83.8%{
+			transform:translateZ(-50px);
+		}
+		100%{
+			transform:translateZ(-50px);
+		}
+	}
+	@keyframes test25{
+		16.66%{
+			transform: translateX(-100px) translateZ(-50px);
+		}
+		33.33%{
+			transform: translateX(-100px) translateZ(-100px);
+		}
+		50%{
+			transform: translateX(-100px) translateZ(-100px) translateY(50px);
+		}
+		66.65%{
+			transform: translateX(0px) translateZ(-100px) translateY(50px);
+		}
+		83.8%{
+			transform: translateX(0px) translateZ(-50px) translateY(50px);
+		}
+		100%{
+			transform: translateX(0px) translateZ(-50px);
+		}
+	}
+	@keyframes test26{
+		16.66%{
+			transform:translateZ(-50px);
+		}
+		33.33%{
+			transform:translateZ(-100px);
+		}
+		50%{
+			transform:translateZ(-100px) translateY(50px);
+		}
+		66.65%{
+			transform:translateZ(-100px) translateY(50px);
+		}
+		83.8%{
+			transform:translateZ(-50px) translateY(50px);
+		}
+		100%{
+			transform:translateZ(-50px);
+		}
+	}
+	@keyframes test27{
+		16.66%{
+			transform:translateZ(-50px) translateX(100px);
+		}
+		33.33%{
+			transform:translateZ(-100px) translateX(100px);
+		}
+		50%{
+			transform:translateZ(-100px) translateX(100px) translateY(50px);
+		}
+		66.65%{
+			transform:translateZ(-100px) translateY(50px);
+		}
+		83.8%{
+			transform:translateZ(-50px) translateY(50px);
+		}
+		100%{
+			transform:translateZ(-50px);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="cube">
+	  <div class="sq1">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq2">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq3">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq4">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq5">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq6">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq7">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq8">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq9">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq10">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq11">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq12">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq13">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq14">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq15">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq16">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq17">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq18">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq19">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq20">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq21">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq22">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq23">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq24">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq25">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq26">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	  <div class="sq27">
+		<div class="f f1"></div>
+		<div class="f f2"></div>
+		<div class="f f3"></div>
+	  </div>
+	</div>
+</body>
+</html>
